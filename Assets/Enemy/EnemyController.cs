@@ -30,7 +30,20 @@ public class EnemyController : MonoBehaviour
         if (revTime > 0)
         {
             //テキストをみて完成させましょう
-
+            time += Time.deltaTime;
+            if (time >= revTime)
+            {
+                isToRight = !isToRight;
+                time = 0;
+                if (isToRight)
+                {
+                    transform.localScale = new Vector2(-1,1);
+                }
+                else
+                {
+                    transform.localScale = new Vector2(1,1);
+                }
+            }
         }
     }
 
@@ -39,7 +52,15 @@ public class EnemyController : MonoBehaviour
         if (onGround)
         {
             //テキストをみて完成させましょう
-
+            Rigidbody2D rbody = GetComponent<Rigidbody2D>();
+            if (isToRight)
+            {
+                rbody.linearVelocity = new Vector2(speed, rbody.linearVelocity.y);
+            }
+            else
+            {
+                rbody.linearVelocity = new Vector2(-speed, rbody.linearVelocity.y);
+            }
         }
     }
 
@@ -47,6 +68,15 @@ public class EnemyController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //テキストをみて完成させましょう
-
+        isToRight = !isToRight;
+        time = 0;
+        if (isToRight)
+        {
+            transform.localScale = new Vector2(-1,1);
+        }
+        else
+        {
+            transform.localScale = new Vector2(1,1);
+        }
     }
 }

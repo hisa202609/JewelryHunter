@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6187526213814621149}
   - component: {fileID: 8778798747903289633}
   - component: {fileID: 6486952509205540886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: -1.07, y: 1.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1554261139970429810}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &6187526213814621149
@@ -151,7 +152,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e32e68a41dfba443fbd89fa04334a9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objPrefab: {fileID: 0}
+  objPrefab: {fileID: 7873482433328558004, guid: 2ff75999bef8e4c5da56d06cd5f41508, type: 3}
   delayTime: 3
-  fireSpeed: 4
+  fireSpeed: 2
   length: 8
+--- !u!1 &8713163374777592997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1554261139970429810}
+  m_Layer: 7
+  m_Name: gate
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1554261139970429810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8713163374777592997}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
+  m_LocalPosition: {x: 1.22, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5848634059262010796}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
