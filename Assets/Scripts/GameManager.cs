@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public GameObject nextButton; // 次のステージボタン
 
     Image titleImage; // タイトル画像
-    GameState gamestate = GameState.InGame; // ゲームの状態
 
     public string nextSceneName; // 次のシーン名を設定するための変数
 
@@ -52,7 +51,6 @@ public class GameManager : MonoBehaviour
         if (PlayerController.gameState == GameState.GameClear)
         {
             //ゲームクリア
-            gamestate = GameState.GameClear;
             mainImage.SetActive(true);　//　画像表示
             panel.SetActive(true);      // ボタン表示
             //RESTARTボタンを無効化する
@@ -78,7 +76,6 @@ public class GameManager : MonoBehaviour
         else if (PlayerController.gameState == GameState.GameOver)
         {
             //ゲームオーバー
-            gamestate = GameState.GameOver;
             mainImage.SetActive(true);  // 画像表示
             panel.SetActive(true);      // ボタン表示
             //RESTARTボタンを無効化する

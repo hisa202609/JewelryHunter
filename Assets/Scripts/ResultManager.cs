@@ -28,7 +28,8 @@ public class ResultManager : MonoBehaviour
 
     //シーンを読み込む
     public void Load()
-    { 
-     SceneManager.LoadScene(sceneName);
+    {
+        GameManager.totalScore = 0; // 合計スコアをリセット
+        SceneManager.LoadScene(sceneName);
     }
 }

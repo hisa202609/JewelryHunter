@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResultManager
   scoreText: {fileID: 1580216177}
-  scoreTextObject: {fileID: 0}
+  scoreTextObject: {fileID: 1580216175}
   sceneName: Title
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
